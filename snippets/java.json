@@ -4,9 +4,23 @@
     "prefix": ["con", "log", "sysout", "print"],
     "body": ["System.out.println($1);"]
   },
+  "java-pro:public void method": {
+    "description": "Java public void main",
+    "prefix": "puvm",
+    "body": ["public void ${1:methodName}($2) {", "\t$0", "}"]
+  },
+  "java-pro:public static void main": {
+    "description": "public static void main",
+    "prefix": ["pusvm"],
+    "body": [
+      "public static void main(String args[]) {",
+      "\tSystem.out.println($0);",
+      "}"
+    ]
+  },
   "java-pro:Java Class with main method": {
     "description": "Java Class with main method",
-    "prefix": "java-main",
+    "prefix": ["java-main"],
     "body": [
       "public class ${1:ClassName} {",
       "\tpublic static void main(String args[]) {",
